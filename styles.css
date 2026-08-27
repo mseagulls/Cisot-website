@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+:root {
+    --base-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #88d02f;
+    --secondary-color: rgb(11, 29, 41);
+    --color-1: #0b1d29;
+    --color-2: #192e37;
+    --color-3: #253b41;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* border-box keeps padding/borders from messing up size calculations */
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Oswald;
+    color: var(--text-color);
+}
+
+body {
+    padding: 1em;
+    background-color: var(--base-color);
+}
+
+h1,
+h2,
+h3 {
+    font-family: Oswald;
+    color: var(--primary-color);
+}
+
+p {
+    font-family: Oswald;
+    color: var(--primary-color);
+}
+
+nav {
+    margin: 1em auto 3em auto;
+    width: min(1000px, 100%);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    /* list-style-type: none -> removes default bullet points */
+    list-style-type: none;
+    gap: 2em;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-family: Oswald;
+    font-weight: bold;
+}
+
+nav a {
+    /* text-decotation: none -> removes the default underline */
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header,
+section {
+    margin: 2em auto;
+    width: min(75em, 100%);
+    background-color: var(--color-1);
+    padding: min(2em, 15%);
+    /* border-radius -> adds a slight curve to the corners */
+    border-radius: 1em;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap -> allows content to stack on smaller screens */
+    flex-wrap: wrap;
+    gap: 3em;
+}
