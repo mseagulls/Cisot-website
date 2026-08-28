@@ -23,25 +23,28 @@ html {
 }
 
 body {
-    padding: 1em;
-    background-color: var(--base-color);
+    background-color: #88d02f;
 }
-
 h1,
 h2,
 h3 {
     font-family: Oswald;
-    color: var(--primary-color);
+    color: var(--base-color);
 }
 
 p {
     font-family: Oswald;
-    color: var(--primary-color);
+    color: var(--base-color);
 }
 
 nav {
-    margin: 1em auto 3em auto;
-    width: min(1000px, 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 1em max(1em, 5vw);
+    margin: 0;
 }
 
 nav ul {
@@ -72,17 +75,21 @@ header,
 section {
     margin: 2em auto;
     width: min(75em, 100%);
-    background-color: var(--color-1);
     padding: min(2em, 15%);
     /* border-radius -> adds a slight curve to the corners */
     border-radius: 1em;
 }
 
-.flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* flex-wrap: wrap -> allows content to stack on smaller screens */
-    flex-wrap: wrap;
-    gap: 3em;
+header {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+.header-image {
+    display: block;
+    width: 100%;
+    height: auto;
 }
