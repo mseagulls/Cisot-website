@@ -4,10 +4,8 @@
     --base-color: #ffffff;
     --text-color: #000000;
     --primary-color: #88d02f;
-    --secondary-color: rgb(11, 29, 41);
-    --color-1: #0b1d29;
-    --color-2: #192e37;
-    --color-3: #253b41;
+    --color-1: #92a39d;
+    --color-2: rgba(233, 241, 232, 0.22);
 }
 
 * {
@@ -17,79 +15,152 @@
     box-sizing: border-box;
 }
 
-html {
-    font-family: Oswald;
+html, body {
+    min-height: 100%;
     color: var(--text-color);
 }
 
 body {
-    background-color: #88d02f;
-}
-h1,
-h2,
-h3 {
-    font-family: Oswald;
     color: var(--base-color);
+    background-color: var(--primary-color);
+    font-family: "Oswald";
+    min-height: 100dvh;
+    background-image:
+        linear-gradient(rgba(3, 12, 18, 0.44), rgba(3, 12, 19, 0.96) 65%),
+        url("../assets/images/CISOT.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: min(100vw, 1500px) auto;
+    overflow-x: hidden;
 }
 
-p {
-    font-family: Oswald;
-    color: var(--base-color);
-}
-
-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    padding: 1em max(1em, 5vw);
-    margin: 0;
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    /* list-style-type: none -> removes default bullet points */
-    list-style-type: none;
-    gap: 2em;
-}
-
-nav li:first-child {
-    margin-right: auto;
-    font-family: Oswald;
-    font-weight: bold;
-}
-
-nav a {
-    /* text-decotation: none -> removes the default underline */
+a {
+    color: var(--primary-color);
     text-decoration: none;
+}
+
+.site-header, 
+.site-footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    /* max-width: 1380px; */
+    max-width: 100%;
+    padding: 28px 5vw;
+}
+
+.site-header {
+    border-bottom: 1px solid var(--color-1);
+}
+
+.music-kicker, 
+.story-kicker, 
+.contact-kicker, 
+.hero-cover {
     color: var(--primary-color);
 }
 
-nav a:hover {
-    text-decoration: underline;
+.site-nav {
+    display: flex;
+    gap: 34px;
 }
 
-header,
-section {
-    margin: 2em auto;
-    width: min(75em, 100%);
-    padding: min(2em, 15%);
-    /* border-radius -> adds a slight curve to the corners */
-    border-radius: 1em;
-}
-
-header {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border-radius: 0;
-}
 
 .header-image {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.site-nav a,
+.header-cta,
+.meta-label,
+.section-kicker,
+.release-type,
+.site-footer {
+    font-family: "Oswald";
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.site-nav a {
+    color: var(--base-color);
+    transition: color 0.2s ease;
+}
+
+.site-nav a:hover,
+.music-links a:hover,
+.footer-socials a:hover {
+    color: var(--primary-color);
+}
+
+.header-cta {
+    border: 1px solid var(--base-color);
+    padding: 12px 15px;
+}
+
+.header-cta span,
+.button span,
+.text-link span,
+.contact-email span {
+    color: var(--color-1);
+    margin-left: 8px;
+}
+
+.hero {
+    min-height: 650px;
+    margin: auto;
+    max-width: 1380px;
+    padding: 15vh 5vw 8vh;
+    position: relative;
+}
+
+.hero-copy {
+    max-width: 760px;
+}
+
+.status-dot {
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: inline-block;
+    height: 9px;
+    margin-right: 9px;
+    width: 9px;
+}
+
+h1,
+h2,
+h3
+p {
+    margin-top: 0;
+}
+
+h1,
+h2 {
+    font-size: clamp(4rem, 10vw,9rem);
+    letter-spacing: -.08em;
+    line-height: 30px 0;
+    text-transform: uppercase;
+    /* font-style: italic; */
+}
+
+h1 em,
+h2 em {
+    font-style: italic;
+}
+
+.hero-intro {
+    color: var(--color-1);
+    font-size: 1rem;
+    line-height: 1.65;
+    max-width: 270px;
+}
+
+.hero-actions {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+    margin-top: 27px;
 }
