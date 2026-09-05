@@ -1,17 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 
 :root {
-    --base-color: #ffffff;
-    --text-color: #000000;
-    --primary-color: #88d02f;
+    --base-color: #e9f1e8;
+    --text-color: #09141c;
+    --primary-color: #c8ff38;
     --color-1: #92a39d;
     --color-2: rgba(233, 241, 232, 0.22);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    /* border-box keeps padding/borders from messing up size calculations */
     box-sizing: border-box;
 }
 
@@ -22,11 +19,11 @@ html, body {
 
 body {
     color: var(--base-color);
-    background-color: var(--primary-color);
-    font-family: "Oswald";
+    background-color: var(--text-color);
+    font-family: "Oswald", sans-serif;
     min-height: 100dvh;
     background-image:
-        linear-gradient(rgba(3, 12, 18, 0.44), rgba(3, 12, 19, 0.96) 65%),
+        linear-gradient(rgba(3, 12, 18, 0.44), rgba(3, 12, 19, 0.96) 48%, var(--text-color) 78%),
         url("../assets/images/CISOT.png");
     background-position: center top;
     background-repeat: no-repeat;
@@ -35,7 +32,7 @@ body {
 }
 
 a {
-    color: var(--primary-color);
+    color: inherit;
     text-decoration: none;
 }
 
@@ -45,8 +42,8 @@ a {
     display: flex;
     justify-content: space-between;
     margin: auto;
-    /* max-width: 1380px; */
-    max-width: 100%;
+    max-width: 1380px;
+    /* max-width: 100%; */
     padding: 28px 5vw;
 }
 
@@ -54,10 +51,16 @@ a {
     border-bottom: 1px solid var(--color-1);
 }
 
-.music-kicker, 
-.story-kicker, 
-.contact-kicker, 
-.hero-cover {
+.wordmark {
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.wordmark span,
+em,
+.section-kicker,
+.status-dot {
     color: var(--primary-color);
 }
 
@@ -66,12 +69,6 @@ a {
     gap: 34px;
 }
 
-
-.header-image {
-    display: block;
-    width: 100%;
-    height: auto;
-}
 
 .site-nav a,
 .header-cta,
@@ -121,6 +118,14 @@ a {
     max-width: 760px;
 }
 
+.hero-cover {
+    color: var(--color-1);
+    font-family: "Oswald", monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
 .status-dot {
     background: var(--primary-color);
     border-radius: 50%;
@@ -141,7 +146,8 @@ h1,
 h2 {
     font-size: clamp(4rem, 10vw,9rem);
     letter-spacing: -.08em;
-    line-height: 30px 0;
+    line-height: 0.86;
+    margin: 30px 0;
     text-transform: uppercase;
     /* font-style: italic; */
 }
@@ -166,8 +172,16 @@ h2 em {
 }
 
 .button {
+    font-family: "Oswald", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    padding: 14px 18px;
+    text-transform: uppercase;
+}
+
+.button-primary {
     background: var(--primary-color);
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
 .text-link {
@@ -175,6 +189,9 @@ h2 em {
     display: inline-block;
     font-family: "Oswald", monospace;
     font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    padding-bottom: 7px;
+    text-transform: uppercase;
     
 }
 
@@ -230,12 +247,12 @@ h2 em {
     padding: 150px 5vw;
 }
 
-.music-kicker {
-    font-size: 0.66rem
-    /* margin-bottom: 25px; */
+.section-kicker {
+    font-size: 0.66rem;
+    margin-bottom: 25px;
 }
 
-.music-header h2 {
+.section-heading h2 {
     font-size: clamp(3.2rem, 6vw, 6.3rem);
     margin: 0;
 }
@@ -282,7 +299,7 @@ h2 em {
     color: var(--primary-color);
 }
 
-release-info h3 {
+.release-info h3 {
     font-size: 2.6rem;
     letter-spacing: -0.06em;
     margin: 20px 0 13px;
@@ -292,4 +309,142 @@ release-info h3 {
 .story-copy > p:not(.large-copy) {
     color: var(--color-1);
     line-height: 1.7;
+}
+
+.music-links {
+    border-top: 1px solid var(--color-2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 32px;
+    padding-top: 16px;
+}
+
+.music-links a {
+    font-family: "Oswald", monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+}
+
+.split-section {
+    display: grid;
+    gap: 12vw;
+    grid-template-columns: 1fr 1fr;
+}
+
+.story-copy {
+    padding-top: 84px;
+}
+
+.large-copy {
+    font-size: 1.8rem;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+}
+
+.story-copy .text-link {
+    margin-top: 24px;
+}
+
+.contact-section {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 115px 5vw;
+    text-align: center;
+}
+
+.contact-section .contact-kicker {
+    color: var(--primary-color);
+}
+
+.contact-section h2 {
+    font-size: clamp(4rem, 9vw, 8em);
+    margin: 20px 0 30px;
+}
+
+.contact-section h2 em {
+    color: var(--text-color);
+}
+
+.contact-section > p:not(.section-kicker) {
+    font-family: "Oswald", monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.contact-email {
+    border-bottom: 2px solid var(--text-color);
+    display: inline-block;
+    font-size: clamp(1.4rem, 3vw, 2.7rem);
+    font-weight: 600;
+    margin-top: 12px;
+    padding-bottom: 5px;
+}
+
+.contact-email span {
+    color: var(--text-color);
+}
+
+.site-footer {
+    color: var(--color-2);
+    max-width: none;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-socials a {
+    color: var(--base-color);
+    font-family: "Oswald", monospace;
+    font-size: 0.68rem;
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .site-nav {
+        gap: 14px;
+        order: 3;
+        width: 100%;
+    }
+    .header-cta {
+        margin-left: auto;
+    }
+    .hero {
+        min-height: 650px;
+        padding-top: 12vh;
+    }
+    .hero-meta {
+        bottom: 35px;
+        gap: 22px;
+        left: 5vw;
+        right: auto;
+    }
+    .content-section {
+        padding-bottom: 95px;
+        padding-top: 95px;
+    }
+    .release-feature,
+    .split-section {
+        display: block;
+    }
+    .release-info,
+    .story-copy {
+        margin-top: 38px;
+    }
+    .story-copy {
+        padding-top: 0;
+    }
+    .site-footer {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+    .footer-socials {
+        margin-left: auto;
+    }
 }
