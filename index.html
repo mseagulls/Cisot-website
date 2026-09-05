@@ -9,11 +9,11 @@
     <body>
         <header class="site-header">
             <a class="wordmark" href="#top" aria-label="CISOT home">CISOT<span>.</span></a>
-            <!-- <img class="header-image" src="assets/images/CISOT.png" alt="CISOT logo" /> -->
             <nav class="site-nav" aria-label="main navigation">
                 <a href="index.html">CISOT</a>
                 <a href="#music">Music</a>
                 <a href="#story">Story</a>
+                <a href="#visuals">Visuals</a>
             </nav>
 
             <a class="header-cta" href="#contact">Contact Me <span aria-hidden="true">↗</span></a>
@@ -25,13 +25,11 @@
                 <div class="hero-copy">
                     <p class="hero-cover"><span class="status-dot"></span> Independent Artist</p>
 
-                    <h1 id="hero-title">
-                        Lorem, ipsum dolor.<br /><em>Lorem ipsum dolor sit amet.</em>
-                    </h1>
+                    <h1 id="hero-title">Noise with a<br /><em>point of view.</em></h1>
 
                     <p class="hero-intro">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
-                        voluptatem!
+                        Independent music and moving images from CISOT. Built from late nights, loud
+                        colors, and a little bit of left field.
                     </p>
 
                     <div class="hero-actions">
@@ -39,7 +37,7 @@
                             Listen Now <span aria-hidden="true"> ▶ </span>
                         </a>
                         <a class="text-link" href="#story">
-                            Lorem, ipsum dolor.
+                            See the story
                             <span aria-hidden="true"></span>
                         </a>
                     </div>
@@ -47,21 +45,98 @@
 
                 <div class="hero-meta">
                     <div>
-                        <span class="meta-label">Latest Release</span
-                        ><strong>Lorem, ipsum dolor.</strong>
+                        <span class="meta-label">Latest release</span
+                        ><strong>Blue Hour / single</strong>
                     </div>
+                </div>
+
+                <div class="hero-image" aria-label="CISOT in front of a blue mural">
+                    <img
+                        src="assets/images/Stand-Front.jpg"
+                        alt="CISOT standing in front of a blue graffiti mural" />
+                    <span class="image-stamp">01 / 04</span>
                 </div>
             </section>
 
             <!-- Ticker Section -->
             <section class="ticker" aria-label="Hightlights">
                 <div class="ticker-track">
-                    <span> ADD Something </span>
+                    <span> MUSIC FOR THE OUTSIDE </span>
                     <b>✳</b>
-                    <span> And Here </span>
-
-                    <!-- ^^ maybe add more here?  -->
+                    <span> CISOT / INDEPENDENT ARTIST </span>
+                    <b>✳</b>
+                    <span> MUSIC FOR THE OUTSIDE </span>
                 </div>
+            </section>
+
+            <!-- Visual Journal -->
+            <section class="visual-journal" id="visuals" aria-labelledby="visual-title">
+                <div class="journal-heading">
+                    <p class="section-kicker">Field notes</p>
+                    <h2 id="visual-title">Outside<br /><em>the frame.</em></h2>
+                    <p>Snapshots from the same places and restless energy that shape the music.</p>
+                </div>
+                <div class="journal-grid">
+                    <figure class="journal-card journal-card-wide">
+                        <img
+                            src="assets/images/Wall-2.jpg"
+                            alt="CISOT framed by a colorful graffiti wall"
+                            loading="lazy" />
+                        <figcaption><span>01</span> The wall is part of the band.</figcaption>
+                    </figure>
+                    <figure class="journal-card">
+                        <img
+                            src="assets/images/Smile-Car.jpg"
+                            alt="CISOT smiling beside a car"
+                            loading="lazy" />
+                        <figcaption><span>02</span> Keep moving.</figcaption>
+                    </figure>
+                    <figure class="journal-card journal-card-tall">
+                        <img
+                            src="assets/images/Sitting-Side.jpg"
+                            alt="CISOT sitting beside a graffiti wall"
+                            loading="lazy" />
+                        <figcaption><span>03</span> Find the quiet in the noise.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Full photo archive -->
+            <section class="image-archive" aria-labelledby="archive-title">
+                <div class="archive-heading">
+                    <p class="section-kicker">The picture book</p>
+                    <h2 id="archive-title">Every angle.<br /><em>One session.</em></h2>
+                    <p>Turn the page and keep moving.</p>
+                </div>
+                <div class="book-viewer" aria-label="CISOT photo book">
+                    <button
+                        class="book-button book-button-prev"
+                        type="button"
+                        aria-label="Previous photo">
+                        ←
+                    </button>
+                    <figure class="book-page">
+                        <div class="book-image-wrap">
+                            <img
+                                id="book-image"
+                                src="assets/images/Blue-Background.jpg"
+                                alt="CISOT in front of a blue graffiti wall" />
+                        </div>
+                        <figcaption>
+                            <span id="book-number">04 / 14</span>
+                            <strong id="book-caption">Blue background</strong>
+                        </figcaption>
+                    </figure>
+                    <button
+                        class="book-button book-button-next"
+                        type="button"
+                        aria-label="Next photo">
+                        →
+                    </button>
+                </div>
+                <p class="book-hint">
+                    Use the arrows or your keyboard to flip through the session.
+                </p>
             </section>
 
             <!-- Music Section -->
@@ -70,103 +145,159 @@
                     <p class="section-kicker">Discography</p>
 
                     <h2 id="music-title">
-                        Add Here
+                        Sound for the
                         <br />
-                        <em>And Here</em>
+                        <em>blue hour.</em>
                     </h2>
                 </div>
 
                 <div class="release-feature">
                     <div class="release-art">
                         <span>
-                            ADD
+                            BLUE
                             <br />
-                            ALBUM?
+                            HOUR
                         </span>
-                        <small>CISOT / 2026</small>
+                        <small>CISOT / SINGLE / 2026</small>
                     </div>
 
                     <div class="release-info">
-                        <p class="release-type">New Track Here</p>
+                        <p class="release-type">Latest release</p>
 
-                        <h3>Track Name Here</h3>
+                        <h3>Blue Hour</h3>
 
                         <p>
-                            Describe track or something? Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Rerum ad qui nemo praesentium eligendi aut!
+                            A bright, restless single for the drive home. Press play, turn it up,
+                            and let the city do the rest.
                         </p>
 
                         <div class="music-links">
-                            <a href="#music">Youtube Music</a>
-                            <a href="#music">Apple Music</a>
-                            <a href="#music">Spotify</a>
+                            <a
+                                href="https://music.youtube.com/channel/UCwUWL4a4HJpqAn8F7UspkLQ"
+                                target="_blank"
+                                rel="noreferrer"
+                                >YouTube Music</a
+                            >
+                            <a href="#contact">Apple Music</a>
+                            <a href="#contact">Spotify</a>
                         </div>
                     </div>
                 </div>
             </section>
-            
+
             <!-- Story Section -->
-             <section class="content-section split-section" id="story" aria-labelledby="story-title">
-                
+            <section class="content-section split-section" id="story" aria-labelledby="story-title">
                 <div class="section-heading">
-                    
                     <p class="section-kicker">My Story</p>
-                    
+
                     <h2 id="story-title">
-                            Story Title
-                        <br/>
-                        <em>
-                            Goes Here
-                        </em>
+                        Made in motion
+                        <br />
+                        <em> Stays in motion. </em>
                     </h2>
                 </div>
-                
+
                 <div class="story-copy">
                     <p class="large-copy">
-                        Main Catchy Story Remarks here? ...Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, qui.
+                        CISOT makes music for the in-between places: parking lots, painted walls,
+                        and the long way home.
                     </p>
-                    
+
                     <p>
-                        More story explained here? ... Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aut suscipit unde autem ullam, sapiente sunt labore consectetur harum ab?
+                        The project lives somewhere between a live wire and a quiet conversation.
+                        Every release keeps the edges visible, with beats that move and words that
+                        leave a little room for you.
                     </p>
-                    <a class="text-link" href="#contact">Read my full story
+                    <a class="text-link" href="#contact"
+                        >Start a conversation
                         <span aria-hidden="true">↗</span>
                     </a>
                 </div>
-             </section>
-             
-             <!-- Contact Section -->
-             <section class="contact-section" id="contact" aria-labelledby="contact-title">
-                
-                <p class="section-kicker">
-                    Contact Me
-                </p>
-                
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact-section" id="contact" aria-labelledby="contact-title">
+                <p class="section-kicker">Contact Me</p>
+
                 <h2 id="contact-title">
-                        Add Catch Phrase
-                    <br/>
-                    <em>
-                        Here?
-                    </em>
+                    Bring the
+                    <br />
+                    <em> next idea. </em>
                 </h2>
-                
-                <a class="contact-email" href="mailto:Myemail@email.com">Myemail@email.com <span>↗</span></a>
-                
-             </section>
-             
+
+                <a class="contact-email" href="mailto:hello@cisotmusic.com"
+                    >hello@cisotmusic.com <span>↗</span></a
+                >
+            </section>
         </main>
 
         <footer class="site-footer">
             <span>© 2026 CISOT</span>
-            <span>Add short phrase?</span>
-            
+            <span>Made for the outside world.</span>
+
             <div class="footer-socials">
-                
-                <a href="#contact">Instagram</a>
-                <a href="#contact">Youtube</a>
+                <a href="https://www.instagram.com/cisotzilla" target="_blank" rel="noreferrer"
+                    >Instagram</a
+                >
+                <a
+                    href="https://music.youtube.com/channel/UCwUWL4a4HJpqAn8F7UspkLQ"
+                    target="_blank"
+                    rel="noreferrer"
+                    >YouTube</a
+                >
             </div>
-            
         </footer>
+        <script>
+            const bookPages = [
+                [
+                    "Blue-Background.jpg",
+                    "CISOT in front of a blue graffiti wall",
+                    "Blue background"
+                ],
+                ["Behind-Bars.jpg", "CISOT photographed behind metal bars", "Behind bars"],
+                ["Kick-Car.jpg", "CISOT kicking beside a car", "Kickstart"],
+                ["Laying-Front.jpg", "CISOT laying down in front of a graffiti wall", "Low angle"],
+                ["Laying-Side.jpg", "CISOT laying on the pavement beside a wall", "Side street"],
+                [
+                    "Laying-Side-Mask.jpg",
+                    "CISOT wearing a mask while laying beside a wall",
+                    "No fixed face"
+                ],
+                ["On-Wall.jpg", "CISOT leaning against a graffiti wall", "On the wall"],
+                ["Squat-Car.jpg", "CISOT squatting beside a car", "Parked up"],
+                ["Stand-Side.jpg", "Side profile of CISOT standing outdoors", "Side profile"],
+                ["Vans-Hat.jpg", "CISOT wearing a hat and Vans shoes", "Details"],
+                ["Wall-1.jpg", "CISOT standing against a graffiti wall", "Wall study"]
+            ];
+            const bookImage = document.querySelector("#book-image");
+            const bookNumber = document.querySelector("#book-number");
+            const bookCaption = document.querySelector("#book-caption");
+            let bookIndex = 0;
+
+            function showBookPage(nextIndex) {
+                bookIndex = (nextIndex + bookPages.length) % bookPages.length;
+                const [file, alt, caption] = bookPages[bookIndex];
+                bookImage.classList.add("is-turning");
+                window.setTimeout(() => {
+                    bookImage.src = `assets/images/${file}`;
+                    bookImage.alt = alt;
+                    bookNumber.textContent = `${String(bookIndex + 4).padStart(2, "0")} / 14`;
+                    bookCaption.textContent = caption;
+                    bookImage.classList.remove("is-turning");
+                }, 120);
+            }
+
+            document
+                .querySelector(".book-button-prev")
+                .addEventListener("click", () => showBookPage(bookIndex - 1));
+            document
+                .querySelector(".book-button-next")
+                .addEventListener("click", () => showBookPage(bookIndex + 1));
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "ArrowLeft") showBookPage(bookIndex - 1);
+                if (event.key === "ArrowRight") showBookPage(bookIndex + 1);
+            });
+        </script>
     </body>
 </html>
 
